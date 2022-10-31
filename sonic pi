@@ -1,0 +1,86 @@
+ “Let me introduce myself - I'm [Xuanfan]”
+ "Welcome friend :-)"
+“ Here is my code, try to run it with Sonic pi”
+ 
+ 3.times do
+  live_loop :pinao do
+    use_synth :fm
+    play :c2, attack: 0, release: 1
+    sleep 0.25
+    play :c2, attack: 0, release: 0.5
+    sleep 2
+    play :e2
+    sleep 1
+    play :f2
+    sleep 1
+  end
+end
+
+use_bpm 120
+use_synth :pretty_bell
+play :c4
+sleep 1
+play :c4
+sleep 1
+play :g4
+sleep 1
+play :g4
+sleep 1
+play :a4
+sleep 1
+play :a4
+sleep 1
+play :g4
+sleep 2
+play :f4
+sleep 1
+play :f4
+sleep 1
+play :e4
+sleep 1
+play :e4
+sleep 1
+play :d4
+sleep 1
+play :d4
+sleep 1
+play :c4
+sleep 1
+play 72
+sleep 1
+play 76
+sleep 1
+play 76
+sleep 1
+play 72
+sleep 1.5
+play 83
+sleep 1
+play 74
+sleep 0.5
+play 83
+sleep 0.5
+play 79
+play 84
+
+use_bpm 125
+use_synth :saw
+3.times do
+  live_loop :melody do
+    if one_in(3)
+      use_transpose 2
+    else
+      use_transpose 2
+    end
+    play_pattern_timed [69,72,69,72,64,67,69,69,71], [0.5, 0.5, 0.5, 1, 0.25, 0.5, 0.5,1].ring.tick, attack: 0.1, release: 0.25
+    play_pattern_timed [69,72,69,72,64,67,69,69], [0.5, 0.5, 0.5, 1, 0.25, 0.5, 0.5].ring.tick, attack: 0.2, release: 0.25
+    play_pattern_timed [69,69,69,69,69,-1],[0.5,0.5,0.5,0.5,1,1].ring.tick,attack: 0.5,release: 0.5
+  end
+end
+
+ “Does the 'twinkle, twinkle' at the beginning sound familiar”
+ “Does the sudden change of pace surprise you”
+ “Is the melodic change at the end brainwashing”
+ “That's what I was aiming for”
+ “That's all I've created”
+ “Thank you for your time”
